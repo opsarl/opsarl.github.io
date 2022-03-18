@@ -249,7 +249,7 @@
         csubmitMSG(true, "Please wait...");
         $.ajax({
             type: "POST",
-            url: "php/contactform-process.php",
+            url: "https://formspree.io/f/xvolqvzv",
             data: "name=" + name + "&email=" + email + "&message=" + message,// + "&terms=" + terms, 
             success: function(text) {
                 if (text == "success") {
