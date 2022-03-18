@@ -242,8 +242,8 @@
 
     function csubmitForm() {
         // initiate variables with form content
-		var name = $("#cname").val();
-		var email = $("#cemail").val();
+	var name = $("#cname").val();
+	var email = $("#cemail").val();
         var message = $("#cmessage").val();
         //var terms = $("#cterms").val();
         csubmitMSG(true, "Please wait...");
@@ -251,16 +251,14 @@
             type: "POST",
             url: "https://formspree.io/f/xvolqvzv",
             data: "name=" + name + "&email=" + email + "&message=" + message,// + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    cformSuccess();
-                } else {
-                    cformError();
-                    csubmitMSG(false, text);
-                }
+            success: function(text) {		
+                cformSuccess();
+	    } else {
+                cformError();
+                csubmitMSG(false, text);
             }
         });
-	}
+    }
 
     function cformSuccess() {
         $("#contactForm")[0].reset();
